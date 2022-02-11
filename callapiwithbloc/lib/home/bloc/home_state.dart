@@ -1,19 +1,33 @@
 part of 'home_bloc.dart';
 
 @immutable
-abstract class HomeState {}
+abstract class HomeState extends Equatable {}
 
-class HomeInitial extends HomeState {}
-
-class HomeLoadingState extends HomeState {}
-
-class HomeLoadedState extends HomeState {
-  final String activityName;
-  final String activityType;
-  final int participants;
-
-  HomeLoadedState(this.activityName, this.activityType, this.participants);
+class HomeLoadingState extends HomeState {
+  @override
+  // TODO: implement props
   List<Object?> get props => [];
 }
 
-class HomeNoInternerState extends HomeState {}
+class HomeErrorState extends HomeState {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}
+
+class HomeLoadedState extends HomeState {
+  final String? activityName;
+  final String? activityType;
+  final int? participants;
+
+  HomeLoadedState(this.activityName, this.activityType, this.participants);
+
+  @override
+  List<Object?> get props => [activityName, activityType, participants];
+}
+
+class HomeNoInternetState extends HomeState {
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+}

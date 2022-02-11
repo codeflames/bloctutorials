@@ -6,10 +6,10 @@ class BoredPandaResponse extends Equatable {
   final String? activity;
   final String? type;
   final int? participants;
-  final int? price;
+  final num? price;
   final String? link;
   final String? key;
-  final int? accessibility;
+  final num? accessibility;
 
   const BoredPandaResponse({
     this.activity,
@@ -26,10 +26,10 @@ class BoredPandaResponse extends Equatable {
       activity: data['activity'] as String?,
       type: data['type'] as String?,
       participants: data['participants'] as int?,
-      price: data['price'] as int?,
+      price: data['price'] as num?,
       link: data['link'] as String?,
       key: data['key'] as String?,
-      accessibility: data['accessibility'] as int?,
+      accessibility: data['accessibility'] as num?,
     );
   }
 
@@ -60,10 +60,10 @@ class BoredPandaResponse extends Equatable {
     String? activity,
     String? type,
     int? participants,
-    int? price,
+    num? price,
     String? link,
     String? key,
-    int? accessibility,
+    num? accessibility,
   }) {
     return BoredPandaResponse(
       activity: activity ?? this.activity,
