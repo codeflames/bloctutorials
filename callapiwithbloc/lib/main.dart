@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:counter_app/home/repository/home_repository.dart';
 
 import 'package:counter_app/services/connectivityservice/connectivity_service.dart';
@@ -8,6 +10,11 @@ import 'home/home.dart';
 
 void main() {
   runApp(MyApp());
+
+  (error, stackTrace) async {
+    log('$error');
+    log('$stackTrace');
+  };
 }
 
 class MyApp extends StatelessWidget {
