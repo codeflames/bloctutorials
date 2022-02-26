@@ -8,4 +8,3 @@ This repository is to implement the tutorials found on the official bloc documen
 - write tests(unit, widgets and integrated)
 - make a bloc template for test apps
 - make a bloc template for production apps
-- 
